@@ -1,6 +1,9 @@
 package apptrasporti;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,7 +22,8 @@ public class AppTrasporti extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException { 
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/prova", "root", "");
         launch(args);
     }
     
