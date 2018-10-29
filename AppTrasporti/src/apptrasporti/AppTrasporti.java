@@ -25,6 +25,7 @@ public class AppTrasporti extends Application {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException { 
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/prova", "root", "");
         launch(args);
+        System.out.println();
     }
     
 }
